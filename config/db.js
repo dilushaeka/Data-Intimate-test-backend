@@ -1,4 +1,4 @@
-import {createPool}  from"mysql";
+const {createPool}  = require("mysql");
 
 const pool = createPool({
     port:process.env.DB_PORT,
@@ -9,4 +9,4 @@ const pool = createPool({
     connectionLimit: 10
 });
 
-export default pool;
+module.exports=pool
